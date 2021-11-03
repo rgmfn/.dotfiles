@@ -1,0 +1,13 @@
+-text highlighting
+-netrw/sidebar
+-VimWiki?
+x make coc work
+x fzf fuzzy finder
+-telescope
+-tree sitter (better highlighing)
+-nvim-compe (for text completion)
+-lsp_signature
+-gitsigns.nvim
+
+-i3 (idk if its a vim thing)
+-alacritty?
