@@ -1,4 +1,4 @@
-zsh opens -> ~/.bash_profile -> dotfiles/bash_profile
+zsh opens -> ~/.oh-my-zsh/custom/load_bash_profile.zsh -> ~/.bash_profile -> dotfiles/bash_profile
 
 nvim opens -> ~/init.vim -> dotfiles/init.vim -> dotfiles/vimrc
                                     |

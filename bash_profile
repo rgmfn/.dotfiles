@@ -10,14 +10,16 @@ alias mv="mv -i"
 
 if [ -d "/mnt/c/Users/rygra" ] ; then  # home for laptop
     alias home="cd /mnt/c/Users/rygra/"
-    export DOTFILES="/mnt/c/Users/rygra/OneDrive/Documents/Programming/Github repos/dotfiles"
+    export DOTFILES="/mnt/c/Users/rygra/OneDrive/Documents/Programming/Github Repos/dotfiles"
 fi
 
 if [ -d "/mnt/c/Users/Ryan" ] ; then  # home for desktop
     alias home="cd /mnt/c/Users/Ryan/"
-    export DOTFILES="/mnt/c/Users/Ryan/Documents/Programming/Github repos/dotfiles"
+    export DOTFILES="/mnt/c/Users/Ryan/Documents/Programming/GithubRepos/dotfiles"
 fi
 
 #---END OF ALIASES---
 
 home # starts us in the home directory
+
+echo "dotfiles/bash_profile ran"
