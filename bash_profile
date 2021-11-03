@@ -1,9 +1,6 @@
-if [ -f "${HOME}/.bashrc ] ; then
-    source ~/.bashrc
-fi
-
 export TERM=xterm-256color
-export TERM=screen-256color
+#export TERM=screen-256color
+#idk this just breaks it
 
 #===ALIASES===
 alias ucsc="ssh ragragg@unix.ucsc.edu"
@@ -22,3 +19,5 @@ if [ -d "/mnt/c/Users/Ryan" ] ; then  # home for desktop
 fi
 
 #---END OF ALIASES---
+
+home # starts us in the home directory

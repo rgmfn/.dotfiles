@@ -1,0 +1,6 @@
+zsh opens -> ~/.bash_profile -> dotfiles/bash_profile
+
+nvim opens -> ~/init.vim -> dotfiles/init.vim -> dotfiles/vimrc
+                                    |
+                                    v
+                            dotfiles/coc/vim
