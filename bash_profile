@@ -20,6 +20,5 @@ fi
 
 #---END OF ALIASES---
 
-home # starts us in the home directory
-
-echo "dotfiles/bash_profile ran"
+#home # starts us in the home directory
+#^ happens for every tmux that opens :(
