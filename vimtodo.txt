@@ -10,6 +10,7 @@ x fzf fuzzy finder
 -gitsigns.nvim
 -nvim-colorizer.lua (writing a color code #xxxxxx is highlighted in that color)
 -vim-polyglot? (language packs)
+-floaterm (terminal inside vim?)
 
 -i3 (idk if its a vim thing)
 -alacritty?
