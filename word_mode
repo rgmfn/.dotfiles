@@ -1,3 +1,4 @@
 set wrap
 set linebreak
 set cursorline
+match "%0v."
