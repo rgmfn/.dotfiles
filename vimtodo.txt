@@ -12,5 +12,7 @@ x fzf fuzzy finder
 -vim-polyglot? (language packs)
 -floaterm (terminal inside vim?)
 
+-add <leader>df to telescope into dotfiles
+
 -i3 (idk if its a vim thing)
 -alacritty?
