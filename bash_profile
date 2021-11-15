@@ -17,7 +17,8 @@ alias ucsc="ssh ragragg@unix.ucsc.edu"
 alias ll="ls -la"
 alias cp="cp -i"  # -i makes it so confirm needed for file overwrite
 alias mv="mv -i"
-alias tvim="nvim -c 'source $DOTFILES/word_mode' -c 'Goyo'"
+alias tvim="nvim -c 'source $DOTFILES/word_mode' -c 'Goyo'" # vim optimized for typing
+alias lvim="nvim -c 'source $DOTFILES/word_mode'" # vim optimized for latex
 #---END OF ALIASES---
 
 #home # starts us in the home directory
