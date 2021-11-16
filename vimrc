@@ -227,6 +227,8 @@ nmap <leader>lv :loadview
 nmap <leader>w :wa<CR>
 nmap <leader>x :xa<CR>
 
+nmap sc :set guicursor=i-n-v-c:block
+
 "===TELESCOPE REMAPS
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
