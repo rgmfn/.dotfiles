@@ -5,23 +5,20 @@ export TERM=xterm-256color
 #===ALIASES===
 if [ -d "/mnt/c/Users/rygra" ] ; then  # laptop
     export MYHOME="/mnt/c/Users/rygra"
-    export DOTFILES="$MYHOME/OneDrive/Documents/Programming/Github Repos/dotfiles"
+    export DOTFILES="$MYHOME/OneDrive/Documents/Programming/GithubRepos/dotfiles"
     export SCHOOL="$MYHOME/OneDrive/Documents/School"
-
-    alias dot="cd /mnt/c/Users/rygra/OneDrive/Documents/Programming/Github\ Repos/dotfiles"
 fi
 
 if [ -d "/mnt/c/Users/Ryan" ] ; then  # desktop
     export MYHOME="/mnt/c/Users/Ryan"
     export DOTFILES="$MYHOME/Documents/Programming/GithubRepos/dotfiles"
     export SCHOOL="$MYHOME/Documents/School"
-
-    alias dot="cd /mnt/c/Users/Ryan/Documents/Programming/GithubRepos/dotfiles"
 fi
 
 alias home="cd $MYHOME"
 alias school="cd $SCHOOL"
 alias sch="school"
+alias dot="cd $DOTFILES"
 alias ucsc="ssh ragragg@unix.ucsc.edu"
 alias ll="ls -la"
 alias cp="cp -i"  # -i makes it so confirm needed for file overwrite
