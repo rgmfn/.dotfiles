@@ -15,6 +15,7 @@ set scrolloff=8 " makes it so scrolling with cursor won't make cursor at edge of
 set guicursor=i-n-v-c:block " mostly here because of nvim, sets cursor to always be block
 set clipboard=unnamedplus
 set encoding=utf-8
+set nocompatible " polyglot told me to
 au BufEnter * set fo-=r fo-=o " won't make a new line below a comment also a comment (but it works)
 set t_Co=256 " uses 256 color (helps with a tmux issue)
 match ColorColumn "\%80v." " highlight only happens when line go past 80 characters
@@ -105,7 +106,12 @@ Plug 'sharkdp/fd'
 Plug 'joshdick/onedark.vim'
 Plug 'dracula/vim',{'as':'dracula'}
 Plug 'romgrk/doom-one.vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'overcache/NeoSolarized'
 " Plug 'morhetz/gruvbox'
+
+Plug 'sheerun/vim-polyglot'
+" collection of language packs
 
 call plug#end()
 "---END OF PLUGINS---
