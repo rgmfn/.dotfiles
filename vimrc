@@ -5,7 +5,8 @@ set expandtab
 set softtabstop=4 tabstop=4 shiftwidth=4
 set smartindent
 set nowrap " no word wrap, text will just go off screen
-set smartcase   " searching will be case sensitive
+set ignorecase
+set smartcase   " searching will be case sensitive when capitals are included
 set noswapfile " not create swap file
 set undodir=~/.vim/undodir
 set undofile
