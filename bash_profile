@@ -24,8 +24,7 @@ alias ll="ls -la"
 alias cp="cp -i"  # -i makes it so confirm needed for file overwrite
 alias mv="mv -i"
 alias cvim="nvim -S ncurr.vim"
-alias tvim="nvim -c 'source $DOTFILES/word_mode' -c 'Goyo'" # vim optimized for typing
-alias lvim="nvim -c 'source $DOTFILES/word_mode'" # vim optimized for latex
+alias tvim="nvim -c 'source $DOTFILES/word_mode'" # vim optimized for typing
 #---END OF ALIASES---
 
 #home # starts us in the home directory

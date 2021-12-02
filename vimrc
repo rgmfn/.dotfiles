@@ -103,16 +103,17 @@ Plug 'BurntSushi/ripgrep'
 Plug 'sharkdp/fd'
 " needed by telescope
 
+Plug 'sheerun/vim-polyglot'
+" collection of language packs
+
 "===colorscheme plugins===
 Plug 'joshdick/onedark.vim'
 Plug 'dracula/vim',{'as':'dracula'}
 Plug 'romgrk/doom-one.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'overcache/NeoSolarized'
-" Plug 'morhetz/gruvbox'
-
-Plug 'sheerun/vim-polyglot'
-" collection of language packs
+Plug 'morhetz/gruvbox'
+Plug 'hachy/eva01.vim'
 
 call plug#end()
 "---END OF PLUGINS---
@@ -138,7 +139,8 @@ let g:airline_powerline_fonts = 1
 " let g:airline_right_sep = ''
 
 " Switch to your current theme
-let g:airline_theme = 'dracula'
+" let g:airline_theme = 'dracula'
+let g:airline_theme = 'solarized'
 
 " Always show tabs
 set showtabline=2
@@ -151,9 +153,10 @@ set noshowmode
 
 "===COLORSCHEME CONFIG===
 " colorscheme onedark
-colorscheme dracula
+" colorscheme dracula
 " colorscheme gruvbox
 " colorscheme doom-one
+colorscheme NeoSolarized
 " let g:doom_one_terminal_colors = v:true
 filetype on
 filetype plugin indent on
