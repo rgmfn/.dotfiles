@@ -1,8 +1,10 @@
 set wrap
 set linebreak
+set breakindent
 set cursorline
 match "%0v."
 
 nmap j gj
 nmap k gk
 nmap $ g$
+nmap 0 g0

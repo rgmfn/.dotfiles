@@ -1,3 +1,5 @@
+"called by dotfiles/init.vim
+
 "===BASIC SETS===
 set number
 set relativenumber
@@ -230,6 +232,8 @@ nmap <leader>ms :mksession
 
 "because I accidentally type :W instead of :w a lot and :W isn't mapped
 command W w
+
+command Q qa
 
 nmap <leader>mv :mkview
 nmap <leader>lv :loadview
