@@ -243,6 +243,8 @@ nmap <leader>x :xa<CR>
 
 nmap sc :set guicursor=i-n-v-c:block
 
+nmap <leader>g :Goyo
+
 "===TELESCOPE REMAPS
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
