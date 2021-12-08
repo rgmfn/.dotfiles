@@ -69,7 +69,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'jiangmiao/auto-pairs'
 "auto pair completion for brackets
 
-Plug 'dominikduda/vim_current_word'
+" Plug 'dominikduda/vim_current_word'
 "highlights word under cursor and all occurences of it
 
 "Plug 'vim-scripts/Rainbow-Parenthesis'
@@ -243,7 +243,7 @@ nmap <leader>x :xa<CR>
 
 nmap sc :set guicursor=i-n-v-c:block
 
-nmap <leader>g :Goyo
+nmap <leader>g :Goyo<CR>
 
 "===TELESCOPE REMAPS
 nnoremap <leader>ff <cmd>Telescope find_files<cr>

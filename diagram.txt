@@ -4,3 +4,5 @@ nvim opens -> ~/init.vim -> dotfiles/init.vim -> dotfiles/vimrc
                                     |
                                     v
                             dotfiles/coc/vim
+
+tmux opens -> ~/.tmux.conf -> dotfiles/tmux.conf
