@@ -108,6 +108,13 @@ Plug 'sharkdp/fd'
 Plug 'sheerun/vim-polyglot'
 " collection of language packs
 
+" Plug 'lilydjwg/colorizer'
+" highlights colors with their color (recommended the one below)
+
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+" highlight colors with their color
+
+
 "===colorscheme plugins===
 Plug 'joshdick/onedark.vim'
 Plug 'dracula/vim',{'as':'dracula'}
@@ -142,7 +149,8 @@ let g:airline_powerline_fonts = 1
 
 " Switch to your current theme
 " let g:airline_theme = 'dracula'
-let g:airline_theme = 'solarized'
+" let g:airline_theme = 'solarized'
+" let g:airline_theme = 'onedark'
 
 " Always show tabs
 set showtabline=2
@@ -154,18 +162,21 @@ set noshowmode
 
 
 "===COLORSCHEME CONFIG===
-" colorscheme onedark
+colorscheme onedark
 " colorscheme dracula
 " colorscheme gruvbox
+" colorscheme NeoSolarized
 " colorscheme doom-one
-colorscheme NeoSolarized
 " let g:doom_one_terminal_colors = v:true
+
 filetype on
 filetype plugin indent on
 syntax on
 " set background=dark
 
-highlight ColorColumn ctermbg=magenta
+if (g:colors_name != 'NeoSolarized')
+    set termguicolors "Enables 24-bit RGB color in the TUI.  Uses gui attributes instead of cterm attributes.
+endif
 "---END OF COLORSCHEME CONFIG---
 
 

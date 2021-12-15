@@ -1,6 +1,5 @@
-export TERM=xterm-256color
-#export TERM=screen-256color
-#idk this just breaks it
+# export TERM=xterm-256color
+# export TERM=screen-256color
 
 #===ALIASES===
 if [ -d "/mnt/c/Users/rygra" ] ; then  # laptop
@@ -23,10 +22,9 @@ alias ucsc="ssh ragragg@unix.ucsc.edu"
 alias ll="ls -la"
 alias cp="cp -i"  # -i makes it so confirm needed for file overwrite
 alias mv="mv -i"
-alias cvim="nvim -S ncurr.vim"
+alias cvim="nvim -S Session.vim"
 alias tvim="nvim -c 'source $DOTFILES/word_mode'" # vim optimized for typing
 alias lvim="nvim -c 'source $DOTFILES/latex_mode'" # vim optimized for latex
 #---END OF ALIASES---
 
-#home # starts us in the home directory
-#^ happens for every tmux that opens :(
+export PATH=$PATH:/usr/local/go/bin

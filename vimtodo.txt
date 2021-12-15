@@ -3,12 +3,12 @@
 -VimWiki?
 x make coc work
 x fzf fuzzy finder
--telescope
--tree sitter (better highlighing)
+x telescope
+x tree sitter (better highlighing)
 -nvim-compe (for text completion)
 -lsp_signature
 -gitsigns.nvim
--nvim-colorizer.lua (writing a color code #xxxxxx is highlighted in that color)
+x nvim-colorizer.lua (writing a color code #xxxxxx is highlighted in that color)
 -vim-polyglot? (language packs)
 -floaterm (terminal inside vim?)
 
@@ -16,3 +16,10 @@ x fzf fuzzy finder
 
 -i3 (idk if its a vim thing)
 -alacritty?
+
+for fun:
+-install linux on old lenovo
+-port themes to tmux status bar
+-port themes to airline
+-custom colorscheme? (vt/holo?)
+-changeable tmux themes
