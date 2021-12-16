@@ -4,13 +4,13 @@ if [ -d "/mnt/c/Users/rygra" ]; then  # laptop
 fi
 
 if [ -d "/mnt/c/Users/Ryan" ]; then  # desktop
-    echo "desktop"
+    # echo "desktop"
     export MYHOME="/mnt/c/Users/Ryan"
     export SCHOOL="$MYHOME/Documents/School"
 fi
 
 if [ -d "/home/ryan/" ]; then  # linux laptop
-    echo "laptop"
+    # echo "laptop"
     export MYHOME="/home/ryan"
     export SCHOOL="$MYHOME/Documents/School"
 fi
