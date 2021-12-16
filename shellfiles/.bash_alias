@@ -1,0 +1,11 @@
+alias home="cd $MYHOME"
+alias school="cd $SCHOOL"
+alias sch="school"
+alias dot="cd $DOTFILES"
+alias ucsc="ssh ragragg@unix.ucsc.edu"
+alias ll="ls -la"
+alias cp="cp -i"  # -i makes it so confirm needed for file overwrite
+alias mv="mv -i"
+alias cvim="nvim -S Session.vim"
+alias tvim="nvim -c 'source $DOTFILES/word_mode'" # vim optimized for typing
+alias lvim="nvim -c 'source $DOTFILES/latex_mode'" # vim optimized for latex

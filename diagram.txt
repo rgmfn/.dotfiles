@@ -1,8 +1,5 @@
 zsh opens -> ~/.oh-my-zsh/custom/load_bash_profile.zsh -> ~/.bash_profile -> dotfiles/bash_profile
 
-nvim opens -> ~/init.vim -> dotfiles/init.vim -> dotfiles/vimrc
-                                    |
-                                    v
-                            dotfiles/coc/vim
+nvim opens -> ~/init.vim -> dotfiles/init.vim -> dotfiles/coc/vim
 
 tmux opens -> ~/.tmux.conf -> dotfiles/tmux.conf
