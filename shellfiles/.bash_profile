@@ -3,6 +3,17 @@
 
 export PATH=$PATH:/usr/local/go/bin
 
-source $HOME/.bash_exports
-source $HOME/.bash_alias
-source $HOME/.bashrc
+if [ -f ~/.bash_exports ]; then
+    source $HOME/.bash_exports
+fi
+
+# automatically ran
+# if [[ -f ~/.zshrc && "$SHELL" == "/usr/bin/zsh" ]]; then
+#     echo "should run zshrc"
+#     source $HOME/.zshrc
+# fi
+
+if [[ -f ~/.bashrc && "$SHELL" == "/bin/bash" ]]; then
+    # echo "should run bashrc"
+    source $HOME/.bashrc
+fi
