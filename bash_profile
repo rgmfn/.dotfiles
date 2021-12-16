@@ -2,15 +2,21 @@
 # export TERM=screen-256color
 
 #===ALIASES===
-if [ -d "/mnt/c/Users/rygra" ] ; then  # laptop
+if [ -d "/mnt/c/Users/rygra" ]; then  # laptop
     export MYHOME="/mnt/c/Users/rygra"
     export DOTFILES="$MYHOME/OneDrive/Documents/Programming/GithubRepos/dotfiles"
     export SCHOOL="$MYHOME/OneDrive/Documents/School"
 fi
 
-if [ -d "/mnt/c/Users/Ryan" ] ; then  # desktop
+if [ -d "/mnt/c/Users/Ryan" ]; then  # desktop
     export MYHOME="/mnt/c/Users/Ryan"
     export DOTFILES="$MYHOME/Documents/Programming/GithubRepos/dotfiles"
+    export SCHOOL="$MYHOME/Documents/School"
+fi
+
+if [ -d "/home/ryan/" ]; then  # linux laptop
+    export MYHOME="/home/ryan"
+    export DOTFILES="$MYHOME/dotfiles"
     export SCHOOL="$MYHOME/Documents/School"
 fi
 
