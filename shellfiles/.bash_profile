@@ -3,6 +3,6 @@
 
 export PATH=$PATH:/usr/local/go/bin
 
-source /home/ryan/.bash_exports
-source /home/ryan/.bash_alias
-source /home/ryan/.bashrc
+source $HOME/.bash_exports
+source $HOME/.bash_alias
+source $HOME/.bashrc
