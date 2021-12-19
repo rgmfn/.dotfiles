@@ -2,9 +2,7 @@ if has('nvim')
     source $HOME/.config/nvim/plug-config/coc.vim
 endif
 
-"called by ~/init.vim
-
-"===BASIC SETS===
+" BASIC SETS {{{
 set number
 set relativenumber
 set expandtab
@@ -22,15 +20,14 @@ set scrolloff=8 " makes it so scrolling with cursor won't make cursor at edge of
 set guicursor=i-n-v-c:block " mostly here because of nvim, sets cursor to always be block
 set clipboard=unnamedplus
 set encoding=utf-8
+set foldmethod=marker
 set nocompatible " polyglot told me to
 au BufEnter * set fo-=r fo-=o " won't make a new line below a comment also a comment (but it works)
 set t_Co=256 " uses 256 color (helps with a tmux issue)
 match ColorColumn "\%80v." " highlight only happens when line go past 80 characters
-"---END OF BASIC SETS---
+" }}}
 
-
-
-"===SETS I DON'T USE RIGHT NOW===
+" SETS I DON'T USE RIGHT NOW {{{
 " set noerrorbells
 " set novisualbell
 " set formatoptions-=cro "won't make a new line below a comment also a comment (but it doesn't work)
@@ -40,11 +37,9 @@ match ColorColumn "\%80v." " highlight only happens when line go past 80 charact
 " call matchadd('ColorColumn', '\%81v', 100) " highlight only happens when line go past 80 characters
 " set smartcase " when searching, try to be smart about cases
 " set exrc " if the folder opened (vim .) has a vimrc, will source that local vimrc
-"---END OF SETS I DON'T USE RIGHT NOW---
+" }}}
 
-
-
-"===PLUGINS===
+" PLUGINS {{{
 call plug#begin()
 
 if has('nvim')
@@ -118,8 +113,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 " highlight colors with their color
 
-
-"===colorscheme plugins===
+" COLORSCHEME PLUGINS {{{2
 Plug 'joshdick/onedark.vim'
 Plug 'dracula/vim',{'as':'dracula'}
 Plug 'romgrk/doom-one.vim'
@@ -129,11 +123,28 @@ Plug 'morhetz/gruvbox'
 Plug 'hachy/eva01.vim'
 
 call plug#end()
-"---END OF PLUGINS---
+" }}}2
+" }}}
 
+" COLORSCHEME CONFIG {{{
+colorscheme onedark
+" colorscheme dracula
+" colorscheme gruvbox
+" colorscheme NeoSolarized
+" colorscheme doom-one
+" let g:doom_one_terminal_colors = v:true
 
+filetype on
+filetype plugin indent on
+syntax on
+" set background=dark
 
-"===STATUS LINE CONFIG===
+if (g:colors_name != 'NeoSolarized')
+    set termguicolors "Enables 24-bit RGB color in the TUI.  Uses gui attributes instead of cterm attributes.
+endif
+" }}}
+
+" STATUS LINE CONFIG {{{
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
@@ -161,31 +172,9 @@ set showtabline=2
 
 " We don't need to see things like -- INSERT -- anymore
 set noshowmode
-"---END OF STATUS LINE CONFIG---
+" }}}
 
-
-
-"===COLORSCHEME CONFIG===
-colorscheme onedark
-" colorscheme dracula
-" colorscheme gruvbox
-" colorscheme NeoSolarized
-" colorscheme doom-one
-" let g:doom_one_terminal_colors = v:true
-
-filetype on
-filetype plugin indent on
-syntax on
-" set background=dark
-
-if (g:colors_name != 'NeoSolarized')
-    set termguicolors "Enables 24-bit RGB color in the TUI.  Uses gui attributes instead of cterm attributes.
-endif
-"---END OF COLORSCHEME CONFIG---
-
-
-
-"===VIM CURRENT WORD CONFIG
+" VIM CURRENT WORD CONFIG {{{
 let g:vim_current_word#highlight_delay = 500
 "delays the highlight in milliseconds
 
@@ -194,11 +183,9 @@ let g:vim_current_word#highlight_current_word = 0
 
 " hi CurrentWordTwins cterm=bold,italic
 "sets word's twins to bold and italic
-"---END OF VIM CURRENT WORD CONFIG---
+" }}}
 
-
-
-"===REMAPS===
+" REMAPS {{{
 let mapleader = " " "sets leader key to space
 
 imap jk <Esc>
@@ -256,13 +243,22 @@ nmap <leader>lv :loadview
 nmap <leader>w :wa<CR>
 nmap <leader>x :xa<CR>
 
-nmap sc :set guicursor=i-n-v-c:block
+nmap sc :set guicursor=i-n-v-c:block<CR>
 
 nmap <leader>g :Goyo<CR>
 
-"===TELESCOPE REMAPS
+" moving text around
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+inoremap <C-j> <esc>:m .+1<CR>==
+inoremap <C-k> <esc>:m .-2<CR>==
+nnoremap <leader>j :m .+1<CR>==
+nnoremap <leader>k :m .-2<CR>==
+
+" }}}
+" TELESCOPE REMAPS {{{2
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-"---END OF REMAPS--
+" }}}2

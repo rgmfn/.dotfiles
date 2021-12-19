@@ -8,12 +8,14 @@ if [ -f ~/.bash_exports ]; then
 fi
 
 # automatically ran
-# if [[ -f ~/.zshrc && "$SHELL" == "/usr/bin/zsh" ]]; then
-#     echo "should run zshrc"
+if [[ -f ~/.zshrc && "$SHELL" == "/usr/bin/zsh" ]]; then
+    # echo "should run zshrc"
 #     source $HOME/.zshrc
-# fi
+    source $HOME/.bash_aliases  # doesn't get run by zshrc
+fi
 
 if [[ -f ~/.bashrc && "$SHELL" == "/bin/bash" ]]; then
     # echo "should run bashrc"
     source $HOME/.bashrc
+    # bashrc calls bash_alias
 fi
