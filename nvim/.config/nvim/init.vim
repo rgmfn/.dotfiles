@@ -204,22 +204,22 @@ let mapleader = " " "sets leader key to space
 imap jk <Esc>
 
 "move between window splits
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>l :wincmd l<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
+" nnoremap <leader>h :wincmd h<CR>
+" nnoremap <leader>l :wincmd l<CR>
+" nnoremap <leader>j :wincmd j<CR>
+" nnoremap <leader>k :wincmd k<CR>
 
 "resizing window splits
-nnoremap <leader>+ :10 wincmd +<CR>
-nnoremap <leader>- :10 wincmd -<CR>
-nnoremap <leader>> :10 wincmd ><CR>
-nnoremap <leader>< :10 wincmd <<CR>
+" nnoremap <leader>+ :10 wincmd +<CR>
+" nnoremap <leader>- :10 wincmd -<CR>
+" nnoremap <leader>> :10 wincmd ><CR>
+" nnoremap <leader>< :10 wincmd <<CR>
 
 "moving window splits
-nmap <leader>ml :wincmd L <CR>
-nmap <leader>mk :wincmd K <CR>
-nmap <leader>mj :wincmd J <CR>
-nmap <leader>mh :wincmd H <CR>
+" nmap <leader>ml :wincmd L <CR>
+" nmap <leader>mk :wincmd K <CR>
+" nmap <leader>mj :wincmd J <CR>
+" nmap <leader>mh :wincmd H <CR>
 
 "opens files on the side
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 20<CR>
