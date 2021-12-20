@@ -7,5 +7,5 @@ alias ll="ls -la"
 alias cp="cp -i"  # -i makes it so confirm needed for file overwrite
 alias mv="mv -i"
 alias cvim="nvim -S Session.vim"
-alias tvim="nvim -c 'source $DOTFILES/word_mode'" # vim optimized for typing
-alias lvim="nvim -c 'source $DOTFILES/latex_mode'" # vim optimized for latex
+alias tvim="nvim -c 'source $DOTFILES/vim_modes/word_mode'" # vim optimized for typing
+alias lvim="nvim -c 'source $DOTFILES/vim_modes/latex_mode'" # vim optimized for latex
