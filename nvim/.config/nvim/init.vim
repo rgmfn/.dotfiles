@@ -22,7 +22,6 @@ set clipboard=unnamedplus
 set encoding=utf-8
 set foldmethod=marker
 set nocompatible " polyglot told me to
-au BufEnter * set fo-=r fo-=o " won't make a new line below a comment also a comment (but it works)
 set t_Co=256 " uses 256 color (helps with a tmux issue)
 match ColorColumn "\%80v." " highlight only happens when line go past 80 characters
 " }}}
@@ -34,9 +33,8 @@ match ColorColumn "\%80v." " highlight only happens when line go past 80 charact
 " set listchars=tab:>~,nbsp:_,trail:. " changes what different white space shows up as
 " set list " puts the whitespace changes into effect
 " set colorcolumn=80
-" call matchadd('ColorColumn', '\%81v', 100) " highlight only happens when line go past 80 characters
-" set smartcase " when searching, try to be smart about cases
 " set exrc " if the folder opened (vim .) has a vimrc, will source that local vimrc
+" au BufEnter * set fo-=r fo-=o " won't make a new line below a comment also a comment (but it works)
 " }}}
 
 " PLUGINS {{{
@@ -65,7 +63,7 @@ Plug 'plasticboy/vim-markdown'
 " Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
 "markdown preview
 
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 "auto pair completion for brackets
 
 " Plug 'dominikduda/vim_current_word'

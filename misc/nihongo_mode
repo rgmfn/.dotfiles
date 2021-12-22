@@ -1,0 +1,18 @@
+set wrap
+set linebreak
+set breakindent
+set cursorline
+match "%0v."
+colorscheme dracula
+
+nmap j gj
+nmap k gk
+nmap $ g$
+nmap 0 g0
+
+vmap j gj
+vmap k gk
+vmap $ g$
+vmap 0 g0
+
+Goyo
