@@ -11,3 +11,4 @@ alias cvim="nvim -S Session.vim"
 alias tvim="nvim -c 'source $DOTFILES/misc/word_mode'" # vim optimized for typing
 alias lvim="nvim -c 'source $DOTFILES/misc/latex_mode'" # vim optimized for latex
 alias jvim="nvim -c 'source $DOTFILES/misc/nihongo_mode'" # vim optimized for japanese work
+alias rgquiz="python3 $DOTFILES/misc/test.py"

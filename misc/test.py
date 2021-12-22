@@ -73,8 +73,7 @@ questions = []
 # else:
 #     pattern2 = re.compile(r'(.+)\n{{{3?\n(.+)\n\n.+\n.*}}}3?')
 
-section_pattern = re.compile(r'(.*):\s?.*\d+\s?{{{(.*\n?)+}}}')
-# section_pattern = re.compile(r'(.*):\s?.*\d+\s?{{{((.*\n?)+)}}}')
+section_pattern = re.compile(r'(.*):\s?.*\d+\s?{{{((.*\n?)+)}}}')
 
 with open(sys.argv[1], 'r') as f:
     contents = f.read()
