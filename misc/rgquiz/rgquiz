@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if grep -Fxq "{{{3"
+then
+    echo "lvl3"
+elif grep -Fxq "{{{2"
+then
+    echo "lvl2"
+else
+    echo "lvl1"
+fi
