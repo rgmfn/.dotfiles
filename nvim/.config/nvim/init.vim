@@ -23,7 +23,11 @@ set encoding=utf-8
 set foldmethod=marker
 set nocompatible " polyglot told me to
 set t_Co=256 " uses 256 color (helps with a tmux issue)
+" }}}
+
+" EXTRA HIGHLIGHTS {{{
 match ColorColumn "\%80v." " highlight only happens when line go past 80 characters
+match LineNr "\v(\{\{\{\d?)|(\}\}\}\d?)"
 " }}}
 
 " SETS I DON'T USE RIGHT NOW {{{

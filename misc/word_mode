@@ -19,4 +19,7 @@ vmap 0 g0
 ab cheif chief
 ab thier their
 
+HexokinaseTurnOff
 Goyo
+
+match LineNr "\v(\{\{\{\d?)|(\}\}\}\d?)"
