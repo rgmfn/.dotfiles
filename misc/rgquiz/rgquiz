@@ -1,14 +1,18 @@
 #!/bin/bash
 
-if grep -Fxq "{{{3" $1
+if grep -Fxq "\d+\. .+\?" $1
 then
-    # echo "lvl3"
-    python3 $DOTFILES/misc/rgquiz/lvl3test.py $1
+    echo "list test"
+    # python3 $DOTFILES/misc/rgquiz/listtest.py $1
+elif grep -Fxq "{{{3" $1
+then
+    echo "lvl3"
+    # python3 $DOTFILES/misc/rgquiz/lvl3test.py $1
 elif grep -Fxq "{{{2" $1
 then
-    # echo "lvl2"
-    python3 $DOTFILES/misc/rgquiz/lvl2test.py $1
+    echo "lvl2"
+    # python3 $DOTFILES/misc/rgquiz/lvl2test.py $1
 else
-    # echo "lvl1"
-    python3 $DOTFILES/misc/rgquiz/lvl1test.py $1
+    echo "lvl1"
+    # python3 $DOTFILES/misc/rgquiz/lvl1test.py $1
 fi

@@ -1,17 +1,17 @@
 alias home="cd $MYHOME"
-alias school="cd $SCHOOL"
-alias sch="school"
+alias sch="cd $SCHOOL"
 alias dot="cd $DOTFILES"
+alias pro="cd $PROGRAMMING"
+
 alias ucsc="ssh ragragg@unix.ucsc.edu"
+alias cse130="ssh ragragg@noggin.soe.ucsc.edu" # see lab 1 manual for other server options
 alias ll="ls -la"
 alias cp="cp -i"  # -i makes it so confirm needed for file overwrite
 alias mv="mv -i"
 # alias grep="grep -n"
-alias cvim="nvim -S Session.vim"
-alias tvim="nvim -c 'source $DOTFILES/misc/word_mode'" # vim optimized for typing
+alias svim="nvim -S Session.vim"
+alias wvim="nvim -c 'source $DOTFILES/misc/word_mode'" # vim optimized for typing
 alias lvim="nvim -c 'source $DOTFILES/misc/latex_mode'" # vim optimized for latex
 alias jvim="nvim -c 'source $DOTFILES/misc/nihongo_mode'" # vim optimized for japanese work
-alias rgquiz3="python3 $DOTFILES/misc/rgquiz/lvl3test.py"
-alias rgquiz2="python3 $DOTFILES/misc/rgquiz/lvl2test.py"
-alias rgquiz1="python3 $DOTFILES/misc/rgquiz/lvl1test.py"
+
 alias rgquiz="$DOTFILES/misc/rgquiz/rgquiz"

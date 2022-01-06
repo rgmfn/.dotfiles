@@ -1,18 +1,19 @@
 if [ -d "/mnt/c/Users/rygra" ]; then  # laptop
     export MYHOME="/mnt/c/Users/rygra"
     export SCHOOL="$MYHOME/OneDrive/Documents/School"
+    export PROGRAMMING="$MYHOME/OneDrive/Documents/Programming"
 fi
 
 if [ -d "/mnt/c/Users/Ryan" ]; then  # desktop
-    # echo "desktop"
     export MYHOME="/mnt/c/Users/Ryan"
     export SCHOOL="$MYHOME/Documents/School"
+    export PROGRAMMING="$MYHOME/Documents/Programming"
 fi
 
 if [ -d "/home/ryan/" ]; then  # linux laptop
-    # echo "laptop"
     export MYHOME="/home/ryan"
     export SCHOOL="$MYHOME/Documents/School"
+    export PROGRAMMING="$MYHOME/Documents/Programming"
 fi
 
 export DOTFILES="$HOME/.dotfiles"

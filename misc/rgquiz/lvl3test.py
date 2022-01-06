@@ -3,7 +3,7 @@ import random
 import sys
 
 if len(sys.argv) == 1:
-    print('Usage: python3 lvl3test.py file_to_test_on')
+    print('Usage: rgquiz file_to_test_on')
     sys.exit(1)
 
 def quiz(deck):
