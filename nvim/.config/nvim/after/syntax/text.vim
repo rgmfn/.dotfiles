@@ -6,3 +6,18 @@ hi link hiMagenta CocListFgMagenta
 
 syntax match hiGreen /\v\(\(.+\)\)/
 hi link hiGreen CocListFgGreen
+
+syntax match hiBlue /\v\{\{.+\}\}/
+hi link hiBlue CocListFgBlue
+
+syntax match hiYellow /\v\<\<.+\>\>/
+hi link hiYellow CocListFgYellow
+
+syntax match hiRed /\v\|\|.+\|\|/
+hi link hiRed CocListFgRed
+
+syntax match hiCyan /\v\/\/.+\/\//
+hi link hiCyan CocListFgCyan
+
+syntax match hiGrey /\v\\\\.+\\\\/
+hi link hiGrey CocListFgGrey
