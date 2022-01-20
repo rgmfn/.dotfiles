@@ -111,6 +111,9 @@ Plug 'sheerun/vim-polyglot'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 " highlight colors with their color
 
+" Plug 'Yggdroot/indentLine'
+" This plugin is used for displaying thin vertical lines at each indentation level for code indented with spaces
+
 " COLORSCHEME PLUGINS {{{2
 Plug 'joshdick/onedark.vim'
 Plug 'dracula/vim',{'as':'dracula'}
