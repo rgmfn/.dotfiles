@@ -140,7 +140,7 @@ filetype plugin indent on
 syntax on
 " set background=dark
 
-if (g:colors_name != 'NeoSolarized')
+if (has("termguicolors"))
     set termguicolors "Enables 24-bit RGB color in the TUI.  Uses gui attributes instead of cterm attributes.
 endif
 " }}}
