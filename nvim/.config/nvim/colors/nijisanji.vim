@@ -13,7 +13,7 @@
 let s:overrides = get(g:, "onedark_color_overrides", {})
 
 let s:colors = {
-      \ "nina": get(s:overrides, "nina", { "gui": "#ff0000", "cterm": "204", "cterm16": "1" }),
+      \ "reimu": get(s:overrides, "reimu", { "gui": "#b90b4a", "cterm": "204", "cterm16": "1" }),
       \ "vox": get(s:overrides, "vox", { "gui": "#960018", "cterm": "196", "cterm16": "9" }),
       \ "pomu": get(s:overrides, "pomu", { "gui": "#258e70", "cterm": "114", "cterm16": "2" }),
       \ "millie": get(s:overrides, "millie", { "gui": "#d4af37", "cterm": "180", "cterm16": "3" }),
@@ -198,7 +198,7 @@ endfunction
 
 let s:colors = nijisanji#GetColors()
 
-let s:red = s:colors.nina
+let s:red = s:colors.reimu
 let s:dark_red = s:colors.vox
 let s:green = s:colors.pomu
 let s:yellow = s:colors.millie
