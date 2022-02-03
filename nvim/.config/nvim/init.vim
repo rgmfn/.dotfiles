@@ -145,6 +145,10 @@ if (has("termguicolors"))
 endif
 " }}}
 
+" HEXOKINASE CONFIG {{{
+let g:Hexokinase_highlighters = ['backgroundfull']
+" }}}
+
 " STATUS LINE CONFIG {{{
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
