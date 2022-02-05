@@ -16,11 +16,13 @@ let s:colors = {
       \ "reimu": get(s:overrides, "reimu", { "gui": "#b90b4a", "cterm": "204", "cterm16": "1" }),
       \ "vox": get(s:overrides, "vox", { "gui": "#960018", "cterm": "196", "cterm16": "9" }),
       \ "pomu": get(s:overrides, "pomu", { "gui": "#258e70", "cterm": "114", "cterm16": "2" }),
-      \ "millie": get(s:overrides, "millie", { "gui": "#d4af37", "cterm": "180", "cterm16": "3" }),
+      \ "millie": get(s:overrides, "millie", { "gui": "#febc87", "cterm": "180", "cterm16": "3" }),
       \ "petra": get(s:overrides, "petra", { "gui": "#ffae42", "cterm": "173", "cterm16": "11" }),
       \ "ike": get(s:overrides, "ike", { "gui": "#348ec7", "cterm": "39", "cterm16": "4" }),
       \ "selen": get(s:overrides, "selen", { "gui": "#7e4eac", "cterm": "170", "cterm16": "5" }),
       \ "finana": get(s:overrides, "finana", { "gui": "#79cfb8", "cterm": "38", "cterm16": "6" }),
+      \ "enna": get(s:overrides, "enna", { "gui": "#858ed1", "cterm": "235", "cterm16": "0" }),
+      \ "elira": get(s:overrides, "elira", { "gui": "#95c8d8", "cterm": "235", "cterm16": "0" }),
       \ "white": get(s:overrides, "white", { "gui": "#ABB2BF", "cterm": "145", "cterm16": "15" }),
       \ "black": get(s:overrides, "black", { "gui": "#282C34", "cterm": "235", "cterm16": "0" }),
       \ "foreground": get(s:overrides, "foreground", { "gui": "#ABB2BF", "cterm": "145", "cterm16": "NONE" }),
@@ -208,6 +210,9 @@ let s:purple = s:colors.selen
 let s:cyan = s:colors.finana
 let s:white = s:colors.white
 let s:black = s:colors.black
+let s:folded = s:colors.enna
+let s:matchparen = s:colors.enna
+let s:specialchar = s:colors.elira
 let s:foreground = s:colors.foreground
 let s:background = s:colors.background
 let s:comment_grey = s:colors.comment_grey
@@ -259,7 +264,7 @@ call s:h("StorageClass", { "fg": s:yellow }) " static, register, volatile, etc.
 call s:h("Structure", { "fg": s:yellow }) " struct, union, enum, etc.
 call s:h("Typedef", { "fg": s:yellow }) " A typedef
 call s:h("Special", { "fg": s:blue }) " any special symbol
-call s:h("SpecialChar", { "fg": s:dark_yellow }) " special character in a constant
+call s:h("SpecialChar", { "fg": s:specialchar }) " special character in a constant
 call s:h("Tag", {}) " you can use CTRL-] on this
 call s:h("Delimiter", {}) " character that needs attention
 call s:h("SpecialComment", { "fg": s:comment_grey }) " special things inside a comment
@@ -300,7 +305,7 @@ call s:h("SignColumn", {}) " column where signs are displayed
 call s:h("IncSearch", { "fg": s:yellow, "bg": s:comment_grey }) " 'incsearch' highlighting; also used for the text replaced with ":s///c"
 call s:h("LineNr", { "fg": s:gutter_fg_grey }) " Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 call s:h("CursorLineNr", {}) " Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-call s:h("MatchParen", { "fg": s:blue, "gui": "underline", "cterm": "underline" }) " The character under the cursor or just before it, if it is a paired bracket, and its match.
+call s:h("MatchParen", { "fg": s:matchparen, "gui": "underline", "cterm": "underline" }) " The character under the cursor or just before it, if it is a paired bracket, and its match.
 call s:h("ModeMsg", {}) " 'showmode' message (e.g., "-- INSERT --")
 call s:h("MoreMsg", {}) " more-prompt
 call s:h("NonText", { "fg": s:special_grey }) " '~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
