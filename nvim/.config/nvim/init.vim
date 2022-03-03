@@ -257,6 +257,8 @@ nmap sc :set guicursor=i-n-v-c:block<CR>
 
 nmap <leader>g :Goyo<CR>
 
+nmap <leader>cs :%norm ]szG<CR>
+
 " moving text around
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv

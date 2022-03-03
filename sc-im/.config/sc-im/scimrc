@@ -1,0 +1,49 @@
+# ===== COLORSCHEME ===== {{{
+
+DEFINE_COLOR "pomu"   37  142 112
+DEFINE_COLOR "finana" 121 207 184
+DEFINE_COLOR "elira"  149 200 216
+DEFINE_COLOR "petra"  255 174 66
+DEFINE_COLOR "rosemi" 152 195 121
+DEFINE_COLOR "selen"  126 78  172
+DEFINE_COLOR "nina"   255 0   0
+DEFINE_COLOR "enna"   133 142 209
+DEFINE_COLOR "millie" 254 188 135
+DEFINE_COLOR "reimu"  185 11  74
+DEFINE_COLOR "luca"   212 175 55
+DEFINE_COLOR "vox"    150 0   24
+DEFINE_COLOR "mysta"  195 85  43
+DEFINE_COLOR "ike"    52  142 199
+DEFINE_COLOR "shu"    166 96  167
+
+color "type=HEADINGS          fg=ike bg=finana"
+color "type=HEADINGS_ODD      fg=ike bg=elira"
+color "type=MODE              fg=enna bg=DEFAULT_COLOR"
+color "type=NUMB              fg=DEFAULT_COLOR bg=DEFAULT_COLOR"
+color "type=STRG              fg=DEFAULT_COLOR bg=DEFAULT_COLOR"
+color "type=DATEF             fg=DEFAULT_COLOR bg=DEFAULT_COLOR"
+color "type=EXPRESSION        fg=shu bg=DEFAULT_COLOR"
+color "type=GRID_EVEN         fg=DEFAULT_COLOR bg=DEFAULT_COLOR"
+color "type=GRID_ODD          fg=DEFAULT_COLOR bg=DEFAULT_COLOR"
+color "type=CELL_ERROR        fg=nina bg=DEFAULT_COLOR"
+color "type=CELL_NEGATIVE     fg=mysta bg=DEFAULT_COLOR"
+color "type=CELL_SELECTION    fg=DEFAULT_COLOR bg=pomu"
+color "type=CELL_SELECTION_SC fg=DEFAULT_COLOR bg=enna"
+# the selected cell highlight color
+color "type=INFO_MSG          fg=DEFAULT_COLOR bg=DEFAULT_COLOR"
+# if you paste in visual mode
+color "type=ERROR_MSG         fg=nina bg=DEFAULT_COLOR"
+color "type=CELL_ID           fg=petra bg=DEFAULT_COLOR"
+color "type=CELL_FORMAT       fg=luca bg=DEFAULT_COLOR"
+color "type=CELL_CONTENT      fg=DEFAULT_COLOR bg=DEFAULT_COLOR"
+color "type=WELCOME           fg=enna bg=DEFAULT_COLOR"
+color "type=NORMAL            fg=DEFAULT_COLOR bg=DEFAULT_COLOR"
+color "type=INPUT             fg=enna bg=selen"
+color "type=HELP_HIGHLIGHT    fg=DEFAULT_COLOR bg=selen"
+
+# }}}
+
+# ===== BINDINGS ===== {{{
+imap "jk" "<Esc>"
+nmap "cb" ":cellcolor \"fg=DEFAULT_COLOR bg="
+# }}}
