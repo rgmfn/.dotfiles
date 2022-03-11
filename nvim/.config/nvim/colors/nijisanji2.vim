@@ -1,6 +1,6 @@
 " vim:fdm=marker
 " Vim Color File
-" Name:       nijisanji.vim
+" Name:       nijisanji2.vim
 " Author:     rgmfn
 " Based On:   https://github.com/joshdick/onedark.vim/
 
@@ -21,6 +21,7 @@ let s:colors = {
       \ "millie": get(s:overrides, "millie", { "gui": "#febc87", "cterm": "180", "cterm16": "3" }),
       \ "petra": get(s:overrides, "petra", { "gui": "#ffae42", "cterm": "173", "cterm16": "11" }),
       \ "luca": get(s:overrides, "luca", { "gui": "#d4af37", "cterm": "173", "cterm16": "11" }),
+      \ "shu": get(s:overrides, "shu", { "gui": "#a660a7", "cterm": "173", "cterm16": "11" }),
       \ "ike": get(s:overrides, "ike", { "gui": "#348ec7", "cterm": "39", "cterm16": "4" }),
       \ "selen": get(s:overrides, "selen", { "gui": "#7e4eac", "cterm": "170", "cterm16": "5" }),
       \ "finana": get(s:overrides, "finana", { "gui": "#79cfb8", "cterm": "38", "cterm16": "6" }),
@@ -39,7 +40,7 @@ let s:colors = {
       \ "vertsplit": get(s:overrides, "vertsplit", { "gui": "#3E4452", "cterm": "59", "cterm16": "7" }),
       \}
 
-function! nijisanji#GetColors()
+function! nijisanji2#GetColors()
   return s:colors
 endfunction
 " }}}
@@ -122,27 +123,27 @@ endif
 
 set t_Co=256
 
-let g:colors_name="nijisanji"
+let g:colors_name="nijisanji2"
 
 " Set to "256" for 256-color terminals, or
 " set to "16" to use your terminal emulator's native colors
 " (a 16-color palette for this color scheme is available; see
 " < https://github.com/joshdick/onedark.vim/blob/main/README.md >
 " for more information.)
-if !exists("g:nijisanji_termcolors")
-  let g:nijisanji_termcolors = 256
+if !exists("g:nijisanji2_termcolors")
+  let g:nijisanji2_termcolors = 256
 endif
 
 " Not all terminals support italics properly. If yours does, opt-in.
-if !exists("g:nijisanji_terminal_italics")
-  let g:nijisanji_terminal_italics = 0
+if !exists("g:nijisanji2_terminal_italics")
+  let g:nijisanji2_terminal_italics = 0
 endif
 
 " This function is based on one from FlatColor: https://github.com/MaxSt/FlatColor/
 " Which in turn was based on one found in hemisu: https://github.com/noahfrederick/vim-hemisu/
-let s:group_colors = {} " Cache of default highlight group settings, for later reference via `nijisanji#extend_highlight`
+let s:group_colors = {} " Cache of default highlight group settings, for later reference via `nijisanji2#extend_highlight`
 function! s:h(group, style, ...)
-  if (a:0 > 0) " Will be true if we got here from nijisanji#extend_highlight
+  if (a:0 > 0) " Will be true if we got here from nijisanji2#extend_highlight
     let s:highlight = s:group_colors[a:group]
     for style_type in ["fg", "bg", "sp"]
       if (has_key(a:style, style_type))
@@ -158,7 +159,7 @@ function! s:h(group, style, ...)
     let s:group_colors[a:group] = s:highlight " Cache default highlight group settings
   endif
 
-  if g:nijisanji_terminal_italics == 0
+  if g:nijisanji2_terminal_italics == 0
     if has_key(s:highlight, "cterm") && s:highlight["cterm"] == "italic"
       unlet s:highlight.cterm
     endif
@@ -167,7 +168,7 @@ function! s:h(group, style, ...)
     endif
   endif
 
-  if g:nijisanji_termcolors == 16
+  if g:nijisanji2_termcolors == 16
     let l:ctermfg = (has_key(s:highlight, "fg") ? s:highlight.fg.cterm16 : "NONE")
     let l:ctermbg = (has_key(s:highlight, "bg") ? s:highlight.bg.cterm16 : "NONE")
   else
@@ -187,11 +188,11 @@ endfunction
 
 " public {{{
 
-function! nijisanji#set_highlight(group, style)
+function! nijisanji2#set_highlight(group, style)
   call s:h(a:group, a:style)
 endfunction
 
-function! nijisanji#extend_highlight(group, style)
+function! nijisanji2#extend_highlight(group, style)
   call s:h(a:group, a:style, 1)
 endfunction
 
@@ -201,7 +202,7 @@ endfunction
 
 " Color Variables {{{
 
-let s:colors = nijisanji#GetColors()
+let s:colors = nijisanji2#GetColors()
 
 let s:red = s:colors.reimu
 let s:dark_red = s:colors.vox
@@ -210,6 +211,7 @@ let s:yellow = s:colors.luca
 let s:orange = s:colors.millie
 let s:dark_orange = s:colors.petra
 let s:blue = s:colors.ike
+let s:magenta = s:colors.shu
 let s:purple = s:colors.selen
 let s:cyan = s:colors.finana
 let s:white = s:colors.white
@@ -246,12 +248,12 @@ let g:terminal_ansi_colors = [
 " Syntax Groups (descriptions and ordering from `:h w18`) {{{
 
 call s:h("Comment", { "fg": s:comment_grey, "gui": "italic", "cterm": "italic" }) " any comment
-call s:h("Constant", { "fg": s:cyan }) " any constant
+call s:h("Constant", { "fg": s:orange }) " any constant
 call s:h("String", { "fg": s:green }) " a string constant: "this is a string"
 call s:h("Character", { "fg": s:green }) " a character constant: 'c', '\n'
 call s:h("Number", { "fg": s:number }) " a number constant: 234, 0xff
-call s:h("Boolean", { "fg": s:dark_orange }) " a boolean constant: TRUE, false
-call s:h("Float", { "fg": s:dark_orange }) " a floating point constant: 2.3e10
+call s:h("Boolean", { "fg": s:magenta }) " a boolean constant: TRUE, false
+call s:h("Float", { "fg": s:magenta }) " a floating point constant: 2.3e10
 call s:h("Identifier", { "fg": s:red }) " any variable name
 call s:h("Function", { "fg": s:blue }) " function name (also: methods for classes)
 call s:h("Statement", { "fg": s:purple }) " any statement
@@ -266,10 +268,10 @@ call s:h("Include", { "fg": s:blue }) " preprocessor #include
 call s:h("Define", { "fg": s:purple }) " preprocessor #define
 call s:h("Macro", { "fg": s:purple }) " same as Define
 call s:h("PreCondit", { "fg": s:orange }) " preprocessor #if, #else, #endif, etc.
-call s:h("Type", { "fg": s:orange }) " int, long, char, etc.
-call s:h("StorageClass", { "fg": s:orange }) " static, register, volatile, etc.
-call s:h("Structure", { "fg": s:orange }) " struct, union, enum, etc.
-call s:h("Typedef", { "fg": s:orange }) " A typedef
+call s:h("Type", { "fg": s:cyan }) " int, long, char, etc.
+call s:h("StorageClass", { "fg": s:cyan }) " static, register, volatile, etc.
+call s:h("Structure", { "fg": s:cyan }) " struct, union, enum, etc.
+call s:h("Typedef", { "fg": s:cyan }) " A typedef
 call s:h("Special", { "fg": s:blue }) " any special symbol
 call s:h("SpecialChar", { "fg": s:specialchar }) " special character in a constant
 call s:h("Tag", {}) " you can use CTRL-] on this
@@ -300,7 +302,7 @@ call s:h("DiffAdd", { "bg": s:green, "fg": s:black }) " diff mode: Added line
 call s:h("DiffChange", { "fg": s:orange, "gui": "underline", "cterm": "underline" }) " diff mode: Changed line
 call s:h("DiffDelete", { "bg": s:red, "fg": s:black }) " diff mode: Deleted line
 call s:h("DiffText", { "bg": s:orange, "fg": s:black }) " diff mode: Changed text within a changed line
-if get(g:, 'nijisanji_hide_endofbuffer', 0)
+if get(g:, 'nijisanji2_hide_endofbuffer', 0)
     " If enabled, will style end-of-buffer filler lines (~) to appear to be hidden.
     call s:h("EndOfBuffer", { "fg": s:black }) " filler lines (~) after the last line in the buffer
 endif
@@ -326,9 +328,9 @@ call s:h("QuickFixLine", { "fg": s:black, "bg": s:orange }) " Current quickfix i
 call s:h("Search", { "fg": s:black, "bg": s:orange }) " Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
 call s:h("SpecialKey", { "fg": s:special_grey }) " Meta and special keys listed with ":map", also for text used to show unprintable characters in the text, 'listchars'. Generally: text that is displayed differently from what it really is.
 call s:h("SpellBad", { "fg": s:error, "gui": "underline", "cterm": "underline" }) " Word that is not recognized by the spellchecker. This will be combined with the highlighting used otherwise.
-call s:h("SpellCap", { "fg": s:dark_orange }) " Word that should start with a capital. This will be combined with the highlighting used otherwise.
-call s:h("SpellLocal", { "fg": s:dark_orange }) " Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
-call s:h("SpellRare", { "fg": s:dark_orange }) " Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
+call s:h("SpellCap", { "fg": s:yellow }) " Word that should start with a capital. This will be combined with the highlighting used otherwise.
+call s:h("SpellLocal", { "fg": s:yellow }) " Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
+call s:h("SpellRare", { "fg": s:yellow }) " Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
 call s:h("StatusLine", { "fg": s:white, "bg": s:cursor_grey }) " status line of current window
 call s:h("StatusLineNC", { "fg": s:comment_grey }) " status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
 call s:h("StatusLineTerm", { "fg": s:white, "bg": s:cursor_grey }) " status line of current :terminal window
@@ -752,3 +754,4 @@ endif
 " Must appear at the end of the file to work around this oddity:
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
 set background=dark
+

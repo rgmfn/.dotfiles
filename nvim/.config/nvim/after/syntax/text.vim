@@ -21,3 +21,9 @@ hi link hiCyan CocListFgCyan
 
 syntax match hiGrey /\v\\\\.+\\\\/
 hi link hiGrey CocListFgGrey
+
+syntax match hiItal /\v\*.+\*/
+hi link hiItal CocItalic
+
+syntax match hiBold /\v\=.+\=/
+hi link hiBold CocBold
