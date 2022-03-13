@@ -259,6 +259,8 @@ nmap <leader>g :Goyo<CR>
 
 nmap <leader>cs :%norm ]szG<CR>
 
+vnoremap n :norm @
+
 " moving text around
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
