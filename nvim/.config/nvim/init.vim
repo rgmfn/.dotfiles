@@ -1,7 +1,3 @@
-if has('nvim')
-    source $HOME/.config/nvim/plug-config/coc.vim
-endif
-
 " BASIC SETS {{{
 set number
 set relativenumber
@@ -42,6 +38,10 @@ call plug#begin()
 
 if has('nvim')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+endif
+
+if has('nvim')
+    source $HOME/.config/nvim/plug-config/coc.vim
 endif
 ""auto completion
 
@@ -94,7 +94,9 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 " fuzzy finder
 
 Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter-context'
 " better syntax highlighting
+" sticky header of current indentations
 
 Plug 'BurntSushi/ripgrep'
 " ripgrep
