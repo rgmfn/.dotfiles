@@ -94,8 +94,8 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 " fuzzy finder
 
 Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'nvim-treesitter/nvim-treesitter-context'
 " better syntax highlighting
+Plug 'nvim-treesitter/nvim-treesitter-context'
 " sticky header of current indentations
 
 Plug 'BurntSushi/ripgrep'
