@@ -50,7 +50,8 @@ with open(sys.argv[1], 'r') as f:
             q_or_a = input('Would you like to be given the questions or answers (q/a)? ')
 
             question_pattern = re.compile(r'(.*)\n{{{2\n(.*)\s?}}}2')
-            question_matches = question_pattern.finditer(body)
+
+            printf(question_matches)
 
             for qmatch in question_matches:
                 if q_or_a == 'q':
