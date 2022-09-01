@@ -116,9 +116,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-PS1="\e[0;34m[\u]\e[0m:\e[0;32m\w \e[0m$ "
-
 export MANPAGER='nvim +Man!' # vim hosts manpages
 export MANWIDTH=999
 
-bindkey -v # vim mode command prompt
+# bindkey -v # vim mode command prompt
+set -o vi
+PATH="$HOME/.local/bin:$PATH"
