@@ -20,4 +20,4 @@ if [[ -f ~/.bashrc && "$SHELL" == "/bin/bash" ]]; then
     # bashrc calls bash_alias
 fi
 
-PS1="[\[\e[0m\e[38;2;131;142;209m\]\w\[\e[0m]\]$ " # pomu and ike
+PS1="[\[\e[0m\e[38;2;133;142;209m\]\w\[\e[0m]\]$ "

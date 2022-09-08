@@ -1,6 +1,6 @@
 " vim:fdm=marker
 " Vim Color File
-" Name:       nijisanji2.vim
+" Name:       niji2.vim
 " Author:     rgmfn
 " Based On:   https://github.com/joshdick/onedark.vim/
 
@@ -13,20 +13,21 @@
 let s:overrides = get(g:, "onedark_color_overrides", {})
 
 let s:colors = {
+                  \ "vox": get(s:overrides, "vox", { "gui": "#960018", "cterm": "196", "cterm16": "9" }),
       \ "reimu": get(s:overrides, "reimu", { "gui": "#b90b4a", "cterm": "204", "cterm16": "1" }),
-      \ "vox": get(s:overrides, "vox", { "gui": "#960018", "cterm": "196", "cterm16": "9" }),
-      \ "mysta": get(s:overrides, "mysta", { "gui": "#c3552b", "cterm": "196", "cterm16": "9" }),
+      \ "rosemi": get(s:overrides, "rosemi", { "gui": "#dc3753", "cterm": "204", "cterm16": "1" }),
       \ "nina": get(s:overrides, "nina", { "gui": "#ff0000", "cterm": "196", "cterm16": "9" }),
-      \ "pomu": get(s:overrides, "pomu", { "gui": "#258e70", "cterm": "114", "cterm16": "2" }),
+      \ "mysta": get(s:overrides, "mysta", { "gui": "#c3552b", "cterm": "196", "cterm16": "9" }),
       \ "millie": get(s:overrides, "millie", { "gui": "#febc87", "cterm": "180", "cterm16": "3" }),
       \ "petra": get(s:overrides, "petra", { "gui": "#ffae42", "cterm": "173", "cterm16": "11" }),
       \ "luca": get(s:overrides, "luca", { "gui": "#d4af37", "cterm": "173", "cterm16": "11" }),
-      \ "shu": get(s:overrides, "shu", { "gui": "#a660a7", "cterm": "173", "cterm16": "11" }),
-      \ "ike": get(s:overrides, "ike", { "gui": "#348ec7", "cterm": "39", "cterm16": "4" }),
-      \ "selen": get(s:overrides, "selen", { "gui": "#7e4eac", "cterm": "170", "cterm16": "5" }),
+      \ "pomu": get(s:overrides, "pomu", { "gui": "#258e70", "cterm": "114", "cterm16": "2" }),
       \ "finana": get(s:overrides, "finana", { "gui": "#79cfb8", "cterm": "38", "cterm16": "6" }),
-      \ "enna": get(s:overrides, "enna", { "gui": "#858ed1", "cterm": "235", "cterm16": "0" }),
       \ "elira": get(s:overrides, "elira", { "gui": "#95c8d8", "cterm": "235", "cterm16": "0" }),
+      \ "ike": get(s:overrides, "ike", { "gui": "#348ec7", "cterm": "39", "cterm16": "4" }),
+      \ "enna": get(s:overrides, "enna", { "gui": "#858ed1", "cterm": "235", "cterm16": "0" }),
+      \ "shu": get(s:overrides, "shu", { "gui": "#a660a7", "cterm": "173", "cterm16": "11" }),
+      \ "selen": get(s:overrides, "selen", { "gui": "#7e4eac", "cterm": "170", "cterm16": "5" }),
       \ "white": get(s:overrides, "white", { "gui": "#ABB2BF", "cterm": "145", "cterm16": "15" }),
       \ "black": get(s:overrides, "black", { "gui": "#282C34", "cterm": "235", "cterm16": "0" }),
       \ "foreground": get(s:overrides, "foreground", { "gui": "#ABB2BF", "cterm": "145", "cterm16": "NONE" }),
@@ -40,7 +41,7 @@ let s:colors = {
       \ "vertsplit": get(s:overrides, "vertsplit", { "gui": "#3E4452", "cterm": "59", "cterm16": "7" }),
       \}
 
-function! nijisanji2#GetColors()
+function! niji2#GetColors()
   return s:colors
 endfunction
 " }}}
@@ -88,7 +89,7 @@ endfunction
 " |--------------+--------------------+---------|
 " | Petra        | rgb(255, 174, 66)  | #ffae42 |
 " |--------------+--------------------+---------|
-" | Rosemi       | rgb(152, 195, 121) | #98c379 |
+" | Rosemi       | rgb(220, 55, 83)   | #dc3753 |
 " |--------------+--------------------+---------|
 " | Selen        | rgb(126, 78, 172)  | #7e4eac |
 " |--------------+--------------------+---------|
@@ -123,27 +124,27 @@ endif
 
 set t_Co=256
 
-let g:colors_name="nijisanji2"
+let g:colors_name="niji2"
 
 " Set to "256" for 256-color terminals, or
 " set to "16" to use your terminal emulator's native colors
 " (a 16-color palette for this color scheme is available; see
 " < https://github.com/joshdick/onedark.vim/blob/main/README.md >
 " for more information.)
-if !exists("g:nijisanji2_termcolors")
-  let g:nijisanji2_termcolors = 256
+if !exists("g:niji2_termcolors")
+  let g:niji2_termcolors = 256
 endif
 
 " Not all terminals support italics properly. If yours does, opt-in.
-if !exists("g:nijisanji2_terminal_italics")
-  let g:nijisanji2_terminal_italics = 0
+if !exists("g:niji2_terminal_italics")
+  let g:niji2_terminal_italics = 0
 endif
 
 " This function is based on one from FlatColor: https://github.com/MaxSt/FlatColor/
 " Which in turn was based on one found in hemisu: https://github.com/noahfrederick/vim-hemisu/
-let s:group_colors = {} " Cache of default highlight group settings, for later reference via `nijisanji2#extend_highlight`
+let s:group_colors = {} " Cache of default highlight group settings, for later reference via `niji2#extend_highlight`
 function! s:h(group, style, ...)
-  if (a:0 > 0) " Will be true if we got here from nijisanji2#extend_highlight
+  if (a:0 > 0) " Will be true if we got here from niji2#extend_highlight
     let s:highlight = s:group_colors[a:group]
     for style_type in ["fg", "bg", "sp"]
       if (has_key(a:style, style_type))
@@ -159,7 +160,7 @@ function! s:h(group, style, ...)
     let s:group_colors[a:group] = s:highlight " Cache default highlight group settings
   endif
 
-  if g:nijisanji2_terminal_italics == 0
+  if g:niji2_terminal_italics == 0
     if has_key(s:highlight, "cterm") && s:highlight["cterm"] == "italic"
       unlet s:highlight.cterm
     endif
@@ -168,7 +169,7 @@ function! s:h(group, style, ...)
     endif
   endif
 
-  if g:nijisanji2_termcolors == 16
+  if g:niji2_termcolors == 16
     let l:ctermfg = (has_key(s:highlight, "fg") ? s:highlight.fg.cterm16 : "NONE")
     let l:ctermbg = (has_key(s:highlight, "bg") ? s:highlight.bg.cterm16 : "NONE")
   else
@@ -188,11 +189,11 @@ endfunction
 
 " public {{{
 
-function! nijisanji2#set_highlight(group, style)
+function! niji2#set_highlight(group, style)
   call s:h(a:group, a:style)
 endfunction
 
-function! nijisanji2#extend_highlight(group, style)
+function! niji2#extend_highlight(group, style)
   call s:h(a:group, a:style, 1)
 endfunction
 
@@ -202,8 +203,9 @@ endfunction
 
 " Color Variables {{{
 
-let s:colors = nijisanji2#GetColors()
+let s:colors = niji2#GetColors()
 
+let s:pink = s:colors.rosemi
 let s:red = s:colors.reimu
 let s:dark_red = s:colors.vox
 let s:green = s:colors.pomu
@@ -248,7 +250,7 @@ let g:terminal_ansi_colors = [
 " Syntax Groups (descriptions and ordering from `:h w18`) {{{
 
 call s:h("Comment", { "fg": s:comment_grey, "gui": "italic", "cterm": "italic" }) " any comment
-call s:h("Constant", { "fg": s:orange }) " any constant
+call s:h("Constant", { "fg": s:pink }) " any constant
 call s:h("String", { "fg": s:green }) " a string constant: "this is a string"
 call s:h("Character", { "fg": s:green }) " a character constant: 'c', '\n'
 call s:h("Number", { "fg": s:number }) " a number constant: 234, 0xff
@@ -263,11 +265,11 @@ call s:h("Label", { "fg": s:purple }) " case, default, etc.
 call s:h("Operator", { "fg": s:purple }) " sizeof", "+", "*", etc.
 call s:h("Keyword", { "fg": s:red }) " any other keyword
 call s:h("Exception", { "fg": s:purple }) " try, catch, throw
-call s:h("PreProc", { "fg": s:orange }) " generic Preprocessor
+call s:h("PreProc", { "fg": s:pink }) " generic Preprocessor
 call s:h("Include", { "fg": s:blue }) " preprocessor #include
 call s:h("Define", { "fg": s:purple }) " preprocessor #define
 call s:h("Macro", { "fg": s:purple }) " same as Define
-call s:h("PreCondit", { "fg": s:orange }) " preprocessor #if, #else, #endif, etc.
+call s:h("PreCondit", { "fg": s:pink }) " preprocessor #if, #else, #endif, etc.
 call s:h("Type", { "fg": s:cyan }) " int, long, char, etc.
 call s:h("StorageClass", { "fg": s:cyan }) " static, register, volatile, etc.
 call s:h("Structure", { "fg": s:cyan }) " struct, union, enum, etc.
@@ -302,7 +304,7 @@ call s:h("DiffAdd", { "bg": s:green, "fg": s:black }) " diff mode: Added line
 call s:h("DiffChange", { "fg": s:orange, "gui": "underline", "cterm": "underline" }) " diff mode: Changed line
 call s:h("DiffDelete", { "bg": s:red, "fg": s:black }) " diff mode: Deleted line
 call s:h("DiffText", { "bg": s:orange, "fg": s:black }) " diff mode: Changed text within a changed line
-if get(g:, 'nijisanji2_hide_endofbuffer', 0)
+if get(g:, 'niji2_hide_endofbuffer', 0)
     " If enabled, will style end-of-buffer filler lines (~) to appear to be hidden.
     call s:h("EndOfBuffer", { "fg": s:black }) " filler lines (~) after the last line in the buffer
 endif

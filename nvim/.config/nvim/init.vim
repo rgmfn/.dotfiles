@@ -130,11 +130,12 @@ call plug#end()
 " }}}
 
 " COLORSCHEME CONFIG {{{
-colorscheme onedark
+" colorscheme onedark
 " colorscheme dracula
 " colorscheme gruvbox
 " colorscheme NeoSolarized
 " colorscheme doom-one
+colorscheme niji2
 " let g:doom_one_terminal_colors = v:true
 
 filetype on
@@ -178,6 +179,7 @@ let g:airline_powerline_fonts = 1
 " let g:airline_theme = 'dracula'
 " let g:airline_theme = 'solarized'
 " let g:airline_theme = 'onedark'
+let g:airline_theme = 'base16_niji'
 
 " Always show tabs
 set showtabline=2
