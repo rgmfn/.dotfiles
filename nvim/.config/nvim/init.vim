@@ -94,8 +94,8 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 " fuzzy finder
 
 Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'nvim-treesitter/nvim-treesitter-context'
 " better syntax highlighting
+Plug 'nvim-treesitter/nvim-treesitter-context'
 " sticky header of current indentations
 
 Plug 'BurntSushi/ripgrep'
@@ -115,6 +115,9 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 " Plug 'Yggdroot/indentLine'
 " This plugin is used for displaying thin vertical lines at each indentation level for code indented with spaces
+
+Plug 'mattn/emmet-vim'
+" good for creating html tags
 
 " COLORSCHEME PLUGINS {{{2
 Plug 'joshdick/onedark.vim'
@@ -197,6 +200,11 @@ let g:vim_current_word#highlight_current_word = 0
 
 " hi CurrentWordTwins cterm=bold,italic
 "sets word's twins to bold and italic
+" }}}
+
+" EMMET-VIM CONFIG {{{
+let g:user_emmet_mode='n'        "only enable normal mode functions
+let g:user_emmet_leader_key=','
 " }}}
 
 " REMAPS {{{
