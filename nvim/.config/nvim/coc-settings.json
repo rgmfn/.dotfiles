@@ -1,0 +1,11 @@
+{
+    "jedi.executable.command": "/home/ryan/.local/bin/jedi-language-server",
+
+    "python.linting.pylintArgs": [
+        "--extension-pkg-whitelist=pygame", // comma separated
+        "--disable=C0103",  // variable name improper formatting
+        "--disable=C0115",  // missing class docstring
+        "--disable=C0116",  // missing method or function docstring
+        "--disable=R0903",  // too few public methods
+    ]
+}

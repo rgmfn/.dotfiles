@@ -1,4 +1,4 @@
-g vim:fdm=marker
+" vim:fdm=marker
 " Vim Color File
 " Name:       niji2.vim
 " Author:     rgmfn
@@ -25,6 +25,7 @@ let s:colors = {
       \ "finana": get(s:overrides, "finana", { "gui": "#79cfb8", "cterm": "38", "cterm16": "6" }),
       \ "elira": get(s:overrides, "elira", { "gui": "#95c8d8", "cterm": "235", "cterm16": "0" }),
       \ "ike": get(s:overrides, "ike", { "gui": "#348ec7", "cterm": "39", "cterm16": "4" }),
+      \ "yugo": get(s:overrides, "yugo", { "gui": "#1f51ff", "cterm": "170", "cterm16": "5" }),
       \ "enna": get(s:overrides, "enna", { "gui": "#858ed1", "cterm": "235", "cterm16": "0" }),
       \ "shu": get(s:overrides, "shu", { "gui": "#a660a7", "cterm": "173", "cterm16": "11" }),
       \ "selen": get(s:overrides, "selen", { "gui": "#7e4eac", "cterm": "170", "cterm16": "5" }),
@@ -89,11 +90,7 @@ endfunction
 " |--------------+--------------------+---------|
 " | Petra        | rgb(255, 174, 66)  | #ffae42 |
 " |--------------+--------------------+---------|
-<<<<<<< HEAD:nvim/.config/nvim/colors/niji2.vim
 " | Rosemi       | rgb(220, 55, 83)   | #dc3753 |
-=======
-" | Rosemi       | rgb(255, 20, 147)  | #ff1493 |
->>>>>>> 8107bfdf73e4001a45e30bc47cad5a0f257d2506:nvim/.config/nvim/colors/nijisanji2.vim
 " |--------------+--------------------+---------|
 " | Selen        | rgb(126, 78, 172)  | #7e4eac |
 " |--------------+--------------------+---------|
@@ -237,7 +234,8 @@ let s:folded = s:colors.enna
 let s:matchparen = s:colors.enna
 let s:number = s:colors.enna
 let s:specialchar = s:colors.elira
-let s:todo = s:colors.mysta
+" let s:todo = s:colors.mysta
+let s:todo = s:colors.luca
 let s:foreground = s:colors.foreground
 let s:background = s:colors.background
 let s:comment_grey = s:colors.comment_grey
