@@ -1,3 +1,9 @@
+# change string to show if in insert or command mode
+#   when in vim mode on cmdline
 set show-mode-in-prompt on
 set vi-ins-mode-string (\1\e[38;2;37;142;112m+\1\e[0m)
 set vi-cmd-mode-string (\1\e[38;2;185;11;74m-\1\e[0m)
+
+# search commands with same inital characters
+"\e[A": history-search-backward
+"\e[B": history-search-forward
