@@ -269,8 +269,10 @@ nmap sc :set guicursor=i-n-v-c:block<CR>
 
 nmap <leader>g :Goyo<CR>
 
+" idk what this is
 nmap <leader>cs :%norm ]szG<CR>
 
+" idk what this is
 vnoremap n :norm @
 
 " moving text around
@@ -280,6 +282,9 @@ inoremap <C-j> <esc>:m .+1<CR>==
 inoremap <C-k> <esc>:m .-2<CR>==
 nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
+
+" replace selection while keeping pasted thing in register
+xnoremap <leader>p "_dP
 
 " TELESCOPE REMAPS {{{2
 nnoremap <leader>ff <cmd>Telescope find_files<cr>

@@ -203,3 +203,7 @@ bar {
 # Please remove the following exec line:
 #######################################################################
 exec i3-config-wizard
+
+# feh {{{
+exec_always --no-startup-id feh --bg-fill /home/ryan/Pictures/kiki.png
+# }}}

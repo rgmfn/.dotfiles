@@ -5,7 +5,6 @@ alias pro="cd $PROGRAMMING"
 
 alias ucsc="ssh ragragg@unix.ucsc.edu"
 alias cse130="ssh ragragg@olaf.soe.ucsc.edu" # see lab 1 manual for other server options
-alias blue="echo 'rqR6cc69FPV5'"
 alias funcs="source funcs"
 alias ll="ls -la"
 alias cp="cp -i"  # -i makes it so confirm needed for file overwrite
