@@ -119,6 +119,9 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'mattn/emmet-vim'
 " good for creating html tags
 
+Plug 'onsails/lspkind-vim'
+" vscode like pictograms
+
 " COLORSCHEME PLUGINS {{{2
 Plug 'joshdick/onedark.vim'
 Plug 'dracula/vim',{'as':'dracula'}
