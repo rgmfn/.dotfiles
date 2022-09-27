@@ -1,5 +1,6 @@
 # ===== COLORSCHEME ===== {{{
 
+redefine_color "DEFAULT_COLOR"     255 255 255
 redefine_color "RED"     255 0   0
 redefine_color "GREEN"   37  142 112
 redefine_color "YELLOW"  212 175 55
@@ -37,7 +38,7 @@ color "type=GRID_ODD          fg=DEFAULT_COLOR bg=background"
 color "type=CELL_ERROR        fg=nina bg=background"
 color "type=CELL_NEGATIVE     fg=DEFAULT_COLOR bg=background"
 color "type=CELL_SELECTION    fg=DEFAULT_COLOR bg=pomu"
-color "type=CELL_SELECTION_SC fg=DEFAULT_COLOR bg=enna"
+color "type=CELL_SELECTION_SC fg=background bg=enna"
 # the selected cell highlight color
 color "type=INFO_MSG          fg=DEFAULT_COLOR bg=background"
 # if you paste in visual mode
@@ -54,5 +55,5 @@ color "type=HELP_HIGHLIGHT    fg=DEFAULT_COLOR bg=selen"
 
 # ===== BINDINGS ===== {{{
 imap "jk" "<Esc>"
-nmap "cb" ":cellcolor \"fg=DEFAULT_COLOR bg="
+nmap "cb" ":cellcolor \"fg=WHITE bg="
 # }}}

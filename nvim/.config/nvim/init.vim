@@ -36,6 +36,12 @@ match ColorColumn "\%80v." " highlight only happens when line go past 80 charact
 " PLUGINS {{{
 call plug#begin()
 
+Plug 'onsails/lspkind-nvim'
+" vscode like pictograms
+
+Plug 'neovim/nvim-lspconfig'
+" lsp
+
 if has('nvim')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
@@ -118,9 +124,6 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 Plug 'mattn/emmet-vim'
 " good for creating html tags
-
-Plug 'onsails/lspkind-vim'
-" vscode like pictograms
 
 " COLORSCHEME PLUGINS {{{2
 Plug 'joshdick/onedark.vim'
