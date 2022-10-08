@@ -10,8 +10,8 @@ if [ -d "/mnt/c/Users/Ryan" ]; then  # desktop
     export PROGRAMMING="$MYHOME/Documents/Programming"
 fi
 
-if [ -d "/home/ryan/" ]; then  # linux laptop
-    export MYHOME="/home/ryan"
+if [ -d "/home/rgmfn/" ]; then  # linux laptop
+    export MYHOME="/home/rgmfn"
     export SCHOOL="$MYHOME/Documents/School"
     export PROGRAMMING="$MYHOME/Documents/Programming"
 fi

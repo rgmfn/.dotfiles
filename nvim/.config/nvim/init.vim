@@ -44,11 +44,9 @@ Plug 'neovim/nvim-lspconfig'
 
 if has('nvim')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    source ~/.config/nvim/plug-config/coc.vim
 endif
 
-if has('nvim')
-    source $HOME/.config/nvim/plug-config/coc.vim
-endif
 ""auto completion
 
 " Plug 'ycm-core/YouCompleteMe'
@@ -209,8 +207,8 @@ let g:vim_current_word#highlight_current_word = 0
 " }}}
 
 " EMMET-VIM CONFIG {{{
-let g:user_emmet_mode='n'        "only enable normal mode functions
-let g:user_emmet_leader_key=','
+" let g:user_emmet_mode='n'        "only enable normal mode functions
+" let g:user_emmet_leader_key=','
 " }}}
 
 " REMAPS {{{

@@ -56,4 +56,5 @@ color "type=HELP_HIGHLIGHT    fg=DEFAULT_COLOR bg=selen"
 # ===== BINDINGS ===== {{{
 imap "jk" "<Esc>"
 nmap "cb" ":cellcolor \"fg=WHITE bg="
+vmap "cb" ":cellcolor \"fg=WHITE bg="
 # }}}
