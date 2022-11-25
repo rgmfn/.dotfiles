@@ -49,6 +49,7 @@ disk "/" {
 
 load {
         format = "%1min"
+        # number of processes waiting on the CPU in the past minute
 }
 
 memory {
@@ -58,5 +59,6 @@ memory {
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+        format = "%Y-%m-%d %I:%M:%S"  # 12 hour format
+        # format = "%Y-%m-%d %H:%M:%S"  # 24 hour format
 }

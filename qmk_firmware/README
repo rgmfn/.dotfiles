@@ -1,0 +1,2 @@
+qmk compile -kb ferris/sweep -km rgmfn
+qmk flash

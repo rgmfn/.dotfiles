@@ -123,6 +123,12 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'mattn/emmet-vim'
 " good for creating html tags
 
+Plug 'lervag/vimtex'
+" latex filetype and syntax plugin
+
+Plug 'aclements/latexrun'
+" needed by vimtex
+
 " COLORSCHEME PLUGINS {{{2
 Plug 'joshdick/onedark.vim'
 Plug 'dracula/vim',{'as':'dracula'}
@@ -137,12 +143,12 @@ call plug#end()
 " }}}
 
 " COLORSCHEME CONFIG {{{
-" colorscheme onedark
+colorscheme onedark
 " colorscheme dracula
 " colorscheme gruvbox
 " colorscheme NeoSolarized
 " colorscheme doom-one
-colorscheme niji2
+" colorscheme niji2
 " let g:doom_one_terminal_colors = v:true
 
 filetype on
@@ -185,8 +191,9 @@ let g:airline_powerline_fonts = 1
 " Switch to your current theme
 " let g:airline_theme = 'dracula'
 " let g:airline_theme = 'solarized'
-" let g:airline_theme = 'onedark'
-let g:airline_theme = 'base16_niji'
+" let g:airline_theme = 'solarized_flood'
+let g:airline_theme = 'onedark'
+" let g:airline_theme = 'base16_niji'
 
 " Always show tabs
 set showtabline=2
@@ -209,6 +216,36 @@ let g:vim_current_word#highlight_current_word = 0
 " EMMET-VIM CONFIG {{{
 " let g:user_emmet_mode='n'        "only enable normal mode functions
 " let g:user_emmet_leader_key=','
+" }}}
+
+" {{{ VIMTEX CONFIG
+" This is necessary for VimTeX to load properly. The "indent" is optional.
+" Note that most plugin managers will do this automatically.
+filetype plugin indent on
+
+" This enables Vim's and neovim's syntax-related features. Without this, some
+" VimTeX features will not work (see ":help vimtex-requirements" for more
+" info).
+syntax enable
+
+" Viewer options: One may configure the viewer either by specifying a built-in
+" viewer method:
+let g:vimtex_view_method = 'zathura'
+
+" Or with a generic interface:
+let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+
+" VimTeX uses latexmk as the default compiler backend. If you use it, which is
+" strongly recommended, you probably don't need to configure anything. If you
+" want another compiler backend, you can change it as follows. The list of
+" supported backends and further explanation is provided in the documentation,
+" see ":help vimtex-compiler".
+let g:vimtex_compiler_method = 'latexrun'
+
+" Most VimTeX mappings rely on localleader and this can be changed with the
+" following line. The default is usually fine and is the symbol "\".
+let maplocalleader = ","
 " }}}
 
 " REMAPS {{{
@@ -276,7 +313,7 @@ nmap <leader>g :Goyo<CR>
 " idk what this is
 nmap <leader>cs :%norm ]szG<CR>
 
-" idk what this is
+" run macro on selection
 vnoremap n :norm @
 
 " moving text around

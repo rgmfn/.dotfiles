@@ -15,9 +15,11 @@ alias svim="nvim -S Session.vim"
 alias wvim="nvim -c 'source $DOTFILES/misc/word_mode'" # vim optimized for typing
 alias lvim="nvim -c 'source $DOTFILES/misc/latex_mode'" # vim optimized for latex
 alias jvim="nvim -c 'source $DOTFILES/misc/nihongo_mode'" # vim optimized for japanese work
-alias tks="tmux kill-server"
+alias tka="tmux kill-server" # tmux kill-all
+alias tks="tmux kill-session -t"
 alias tls="tmux ls"
 
 alias scim="sc-im --xlsx_readformulas"
+alias hx="$HOME/.cargo/bin/hx"
 
 alias rgquiz="$DOTFILES/misc/rgquiz/rgquiz"

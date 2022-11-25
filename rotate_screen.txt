@@ -1,0 +1,4 @@
+xrandr -o normal
+xrandr -o left
+xrandr -o right
+xrandr -o inverted
