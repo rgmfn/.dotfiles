@@ -123,10 +123,10 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'mattn/emmet-vim'
 " good for creating html tags
 
-Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 " latex filetype and syntax plugin
 
-Plug 'aclements/latexrun'
+" Plug 'aclements/latexrun'
 " needed by vimtex
 
 " COLORSCHEME PLUGINS {{{2
@@ -253,6 +253,21 @@ let mapleader = " " "sets leader key to space
 
 imap jk <Esc>
 
+nnoremap <A-k> gk
+nnoremap <A-j> gj
+
+" helix-like document movement
+nnoremap gk gg
+nnoremap gj G
+nnoremap gl $
+nnoremap gh 0
+nnoremap gs ^
+vnoremap gk gg
+vnoremap gj G
+vnoremap gl $
+vnoremap gh 0
+vnoremap gs ^
+
 "move between window splits
 " nnoremap <leader>h :wincmd h<CR>
 " nnoremap <leader>l :wincmd l<CR>
@@ -310,7 +325,7 @@ nmap sc :set guicursor=i-n-v-c:block<CR>
 
 nmap <leader>g :Goyo<CR>
 
-" idk what this is
+" add all misspelled words to the local words list
 nmap <leader>cs :%norm ]szG<CR>
 
 " run macro on selection

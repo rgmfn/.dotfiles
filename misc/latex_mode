@@ -9,5 +9,5 @@ match "%0v."
 " nmap $ g$
 " nmap 0 g0
 
-colorscheme NeoSolarized
-AirlineTheme solarized_flood
+colorscheme gruvbox
+AirlineTheme gruvbox

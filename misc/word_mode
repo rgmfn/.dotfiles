@@ -3,8 +3,8 @@ set linebreak
 set breakindent
 set cursorline
 match "%0v."
-colorscheme dracula
-" colorscheme gruvbox
+" colorscheme dracula
+colorscheme gruvbox
 set spell spelllang=en_us
 
 nmap j gj
