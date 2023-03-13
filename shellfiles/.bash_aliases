@@ -3,6 +3,7 @@ alias sch="cd $SCHOOL"
 alias dot="cd $DOTFILES"
 alias pro="cd $PROGRAMMING"
 
+alias spot="cd $SCHOOL/CSE115/spotify-tags/"
 alias ucsc="ssh ragragg@unix.ucsc.edu"
 alias cse130="ssh ragragg@olaf.soe.ucsc.edu" # see lab 1 manual for other server options
 alias funcs="source funcs"

@@ -22,6 +22,14 @@ set t_Co=256 " uses 256 color (helps with a tmux issue)
 match ColorColumn "\%80v." " highlight only happens when line go past 80 characters
 " }}}
 
+" LINE NUMBER MAGIC {{{
+augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+    autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+augroup END
+" }}}
+
 " SETS I DON'T USE RIGHT NOW {{{
 " set noerrorbells
 " set novisualbell
@@ -347,5 +355,9 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+" }}}2
+
+" COC REMAPS {{{2
+nnoremap <leader>cd <cmd>CocList diagnostics<cr>
 " }}}2
 " }}}
