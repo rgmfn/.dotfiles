@@ -21,7 +21,7 @@ alias tks="tmux kill-session -t"
 alias tls="tmux ls"
 
 alias scim="sc-im --xlsx_readformulas"
-alias hx="$HOME/.cargo/bin/hx"
+# alias hx="$HOME/.cargo/bin/hx"
 
 alias rgquiz="$DOTFILES/misc/rgquiz/rgquiz"
 

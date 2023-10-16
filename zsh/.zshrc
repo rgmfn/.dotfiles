@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/rygragg/.oh-my-zsh"
+# export ZSH="~/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -81,7 +81,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -109,10 +109,46 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# some more ls aliases
+alias ls='ls -GH'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# export MANPAGER='nvim +Man!' # vim hosts manpages
+# export MANWIDTH=999
+
+bindkey -v # vim mode command prompt
+
+bindkey "\e[A" history-search-backward
+bindkey "\e[B" history-search-forward
+bindkey "\eOA" history-search-backward
+bindkey "\eOB" history-search-forward
 
 export MANPAGER='nvim +Man!' # vim hosts manpages
 export MANWIDTH=999
 
-bindkey -v # vim mode command prompt
+autoload -Uz vcs_info
+precmd() { vcs_info }
+setopt PROMPT_SUBST
+zstyle ':vcs_info:git:*' formats '(Branch: %b)'
+# PROMPT='%{$fg[cyan]%}%1~%{$reset_color%} ${vcs_info_msg_0_}> '
+
+PS1="%F{blue}[%n]%f %F{red}%~%f %# "
+# PROMPT="%F{blue}[%n]%f %F{red}%~%f ${vcs_info_msg_0_}> %# "
+
+export PATH="$HOME/.config/emacs/bin:$PATH"

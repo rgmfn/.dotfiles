@@ -16,4 +16,10 @@ if [ -d "/home/rgmfn/" ]; then  # linux laptop
     export PROGRAMMING="$MYHOME/Documents/Programming"
 fi
 
+if [ -d "/Users/rgmfn/" ]; then  # macbook
+    export MYHOME="/Users/rgmfn/"
+    export SCHOOL="$MYHOME/Documents/School"
+    export PROGRAMMING="$MYHOME/Documents/Programming"
+fi
+
 export DOTFILES="$HOME/.dotfiles"
