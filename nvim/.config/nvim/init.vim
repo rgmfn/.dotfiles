@@ -247,7 +247,7 @@ nmap <leader>x :xa<CR>
 
 nmap sc :set guicursor=a:block<CR>
 
-nmap <leader>g :Goyo<CR>
+nnoremap <leader>g :Goyo<CR>
 
 " add all misspelled words to the local words list
 nmap <leader>cs :%norm ]szG<CR>
@@ -262,6 +262,10 @@ inoremap <C-j> <esc>:m .+1<CR>==
 inoremap <C-k> <esc>:m .-2<CR>==
 nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
+
+" Git
+
+nnoremap <leader>gp :!git push<cr>
 
 " replace selection while keeping pasted thing in register
 xnoremap <leader>p "_dP
