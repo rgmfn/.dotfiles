@@ -28,3 +28,5 @@ alias scim="sc-im --xlsx_readformulas"
 alias rgquiz="$DOTFILES/misc/rgquiz/rgquiz"
 
 alias sleep="sudo sh -c 'echo mem > /sys/power/state'"
+
+alias colo="echo -e -\033]50;SetProfile=$1\a-"

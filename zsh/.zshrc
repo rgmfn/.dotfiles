@@ -152,3 +152,6 @@ PS1="%F{blue}[%n]%f %F{red}%~%f %# "
 # PROMPT="%F{blue}[%n]%f %F{red}%~%f ${vcs_info_msg_0_}> %# "
 
 export PATH="$HOME/.config/emacs/bin:$PATH"
+
+# opam configuration
+[[ ! -r /Users/rgmfn/.opam/opam-init/init.zsh ]] || source /Users/rgmfn/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null

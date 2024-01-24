@@ -23,3 +23,4 @@ if [ -d "/Users/rgmfn/" ]; then  # macbook
 fi
 
 export DOTFILES="$HOME/.dotfiles"
+export GOPATH="$HOME/go"
