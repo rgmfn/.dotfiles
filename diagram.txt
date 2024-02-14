@@ -1,5 +1,5 @@
 zsh opens -> ~/.oh-my-zsh/custom/load_bash_profile.zsh -> ~/.bash_profile (linked)
 
-nvim opens -> ~/.config/.../init.vim (linked) -> ~/.config/.../coc/vim (linked)
+nvim opens -> ~/.config/.../init.lua (linked) -> sources ~/.config/.../lua/rgmfn/init.lua -> sources other lua files specified in this init.lua
 
 tmux opens -> ~/.tmux.conf (linked)
