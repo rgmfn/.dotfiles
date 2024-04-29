@@ -1,3 +1,4 @@
 if [[ -z $STOW_FOLDERS ]]; then
     STOW_FOLDERS="tmux nvim shellfiles zsh sc-im bash i3 i3status qmk_firmware"
 fi
+# tmux nvim shellfiles zsh sc-im bash i3 i3status qmk_firmware
