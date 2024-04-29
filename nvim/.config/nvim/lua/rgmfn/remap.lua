@@ -21,9 +21,12 @@ vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 
-vim.keymap.set("n", "<leader>f", function()
+vim.keymap.set("n", "<leader>fm", function()
     vim.lsp.buf.format()
 end)
+
+vim.keymap.set("n", "<A-j>", "gj")
+vim.keymap.set("n", "<A-k>", "gk")
 
 vim.keymap.set("n", "gk", "gg")
 vim.keymap.set("n", "gj", "G")
