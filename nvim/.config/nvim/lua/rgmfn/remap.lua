@@ -50,8 +50,6 @@ vim.keymap.set("n", "<leader>u", ":UndotreeShow<CR>")
 
 vim.keymap.set("n", "<leader>u", ":UndotreeShow<CR>")
 
-vim.keymap.set("n", "<leader>g", ":Goyo<CR>")
-
 -- add all misspelled words to the local words list
 vim.keymap.set("n", "<leader>cs", ":%norm ]szG<CR>:%norm ]szG<CR>")
 

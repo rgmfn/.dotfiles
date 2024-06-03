@@ -21,6 +21,7 @@ alias jvim="nvim -c 'source $DOTFILES/misc/nihongo_mode'" # vim optimized for ja
 alias tka="tmux kill-server" # tmux kill-all
 alias tks="tmux kill-session -t"
 alias tls="tmux ls"
+alias crg="$PROGRAMMING/GithubRepos/corg/src/corg"
 
 alias scim="sc-im --xlsx_readformulas"
 # alias hx="$HOME/.cargo/bin/hx"
