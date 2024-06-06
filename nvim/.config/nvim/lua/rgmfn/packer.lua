@@ -34,7 +34,9 @@ return require('packer').startup(function(use)
     use('mattn/emmet-vim')
     use('christoomey/vim-tmux-navigator')
     use('rrethy/vim-hexokinase', {config = 'make hexokinase'})
-    use('airblade/vim-gitgutter')
+    use('lewis6991/gitsigns.nvim')
+    use('stevearc/oil.nvim')
+    use('petertriho/nvim-scrollbar')
 
     use {
         "windwp/nvim-autopairs",
