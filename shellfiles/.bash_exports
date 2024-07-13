@@ -20,6 +20,7 @@ if [ -d "/Users/rgmfn/" ]; then  # macbook
     export MYHOME="/Users/rgmfn/"
     export SCHOOL="$MYHOME/Documents/School"
     export PROGRAMMING="$MYHOME/Documents/Programming"
+    export NOTES="$MYHOME/Documents/Notes"
 fi
 
 export DOTFILES="$HOME/.dotfiles"

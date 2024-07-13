@@ -1,1 +1,1 @@
-vim.keymap.set('n', '<leaader>zm', ':Goyo<CR>')
+vim.keymap.set('n', '<leader>zm', ':Goyo<CR>')

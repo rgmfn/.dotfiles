@@ -25,3 +25,8 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 
 vim.wo.foldmethod = 'marker'
+
+vim.cmd([[
+    autocmd InsertEnter * :set norelativenumber
+    autocmd InsertLeave * :set relativenumber
+]])

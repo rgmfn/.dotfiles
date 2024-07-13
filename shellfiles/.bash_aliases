@@ -2,6 +2,7 @@ alias home="cd $MYHOME"
 alias sch="cd $SCHOOL"
 alias dot="cd $DOTFILES"
 alias pro="cd $PROGRAMMING"
+alias notes="cd $NOTES"
 
 alias spot="cd $SCHOOL/CSE115/spotify-tags/"
 alias ucsc="ssh ragragg@unix.ucsc.edu"
