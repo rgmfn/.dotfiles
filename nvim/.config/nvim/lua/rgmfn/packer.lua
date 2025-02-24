@@ -41,6 +41,8 @@ return require('packer').startup(function(use)
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
     use('tpope/vim-commentary')
+    use('MaxMEllon/vim-jsx-pretty')
+    use('https://github.com/suy/vim-context-commentstring')
     use('tpope/vim-surround')
     use('junegunn/goyo.vim')
     use('mattn/emmet-vim')
@@ -60,6 +62,11 @@ return require('packer').startup(function(use)
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
+    }
+
+    use {
+        "jose-elias-alvarez/null-ls.nvim",
+        requires = { "nvim-lua/plenary.nvim" }
     }
 
     use {
