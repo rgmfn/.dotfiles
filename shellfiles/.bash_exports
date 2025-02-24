@@ -25,3 +25,4 @@ fi
 
 export DOTFILES="$HOME/.dotfiles"
 export GOPATH="$HOME/go"
+export PATH="$HOME/.ghcup/bin:$PATH"
