@@ -43,11 +43,11 @@
 # resize-overlay-duration = 4s 200ms
 
 font-size = 32
-theme = Everforest Dark - Hard
 cursor-style = block
 cursor-style-blink = false
 mouse-hide-while-typing = true
 fullscreen = true
 focus-follows-mouse = true
 custom-shader = ~/.config/ghostty/retro-terminal.glsl
-font-family = BigBlue TerminalPlus
+theme = Everforest Dark - Hard
+# font-family = BigBlue TerminalPlus
