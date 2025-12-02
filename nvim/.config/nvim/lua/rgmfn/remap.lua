@@ -39,7 +39,7 @@ vim.keymap.set("n", "<leader>o", "o<Esc>")
 vim.keymap.set("n", "<leader>O", "O<Esc>")
 
 vim.keymap.set("n", "<leader>cl", "0D")
-vim.keymap.set("n", "<leader>te", ":tabedit ")
+vim.keymap.set("n", "<leader>te", ":tabedit<CR>")
 vim.keymap.set("n", "<leader>mk", ":mksession")
 
 vim.keymap.set("n", "<leader>u", ":UndotreeShow<CR>")

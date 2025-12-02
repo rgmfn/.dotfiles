@@ -4,7 +4,7 @@ lsp.preset('recommended')
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = { 'rust_analyzer', 'gopls', 'clangd', 'lua_ls', 'ocamllsp', 'jedi_language_server' },
+  ensure_installed = { 'rust_analyzer', 'gopls', 'clangd', 'lua_ls', 'ocamllsp' },
   handlers = {
     lsp.default_setup,
   }

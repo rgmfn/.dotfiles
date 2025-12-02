@@ -25,6 +25,9 @@ require('gitsigns').setup{
       end
     end)
 
+    -- Quickfix list
+    map('n', '<leader>hl', ':Gitsigns setqflist<CR>')
+
     -- Actions
     map('n', '<leader>hs', gitsigns.stage_hunk)
     map('n', '<leader>hr', gitsigns.reset_hunk)

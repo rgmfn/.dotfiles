@@ -5,6 +5,7 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fc', builtin.colorscheme, {})
 vim.keymap.set('n', '<leader>mp', builtin.man_pages, {})
 vim.keymap.set('n', '<leader>ht', builtin.help_tags, {})
+vim.keymap.set('n', '<leader>fd', builtin.diagnostics, {})
 
 local telescope = require('telescope')
 
