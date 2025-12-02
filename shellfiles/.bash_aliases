@@ -4,7 +4,6 @@ alias dot="cd $DOTFILES"
 alias pro="cd $PROGRAMMING"
 alias notes="cd $NOTES"
 
-alias spot="cd $SCHOOL/CSE115/spotify-tags/"
 alias ucsc="ssh ragragg@unix.ucsc.edu"
 alias cse130="ssh ragragg@olaf.soe.ucsc.edu" # see lab 1 manual for other server options
 alias funcs="source funcs"
@@ -18,6 +17,7 @@ alias jvim="nvim -c 'source $DOTFILES/misc/nihongo_mode'" # vim optimized for ja
 alias tka="tmux kill-server" # tmux kill-all
 alias tks="tmux kill-session -t"
 alias tls="tmux ls"
+alias tns="tmux new -s"
 alias crg="$PROGRAMMING/GithubRepos/corg/src/corg"
 
 alias scim="sc-im --xlsx_readformulas"
@@ -26,5 +26,3 @@ alias scim="sc-im --xlsx_readformulas"
 alias rgquiz="$DOTFILES/misc/rgquiz/rgquiz"
 
 alias sleep="sudo sh -c 'echo mem > /sys/power/state'"
-
-alias colo="echo -e -\033]50;SetProfile=$1\a-"
