@@ -1,0 +1,11 @@
+general.import = [
+    # "./tokyo-night.toml"
+    "./rose-pine.toml"
+]
+
+[font]
+size = 18.0
+normal = { family = "MesloLGLDZ Nerd Font Mono", style = "Regular" }
+
+[window]
+startup_mode = "Fullscreen" # SimpleFullscreen?
